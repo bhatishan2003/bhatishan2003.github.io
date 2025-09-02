@@ -1,270 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ishan Bhat | Portfolio</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Bhat | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="nav">
-    <a href="#intro" class="nav-item" title="Home">
-      <i class="fas fa-home"></i>
-    </a>
-    <a href="#about" class="nav-item" title="About">
-      <i class="fas fa-user"></i>
-    </a>
-    <a href="#projects" class="nav-item" title="Projects">
-      <i class="fas fa-code"></i>
-    </a>
-  </nav>
-
-  <!-- Intro Section -->
-  <section id="intro">
-    <div class="intro-content">
-      <h1>Ishan Bhat</h1>
-      <div class="subtitle">Computer Science Graduate</div>
-      <p class="description">
-        Passionate about Data Science, AI, and Machine Learning. I love building innovative projects 
-        that solve real-world problems and exploring cutting-edge technologies to create impactful solutions.
-      </p>
-      <div class="cta-buttons">
-        <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-rocket"></i>
-          View Projects
-        </a>
-        <a href="#about" class="btn btn-secondary">
-          <i class="fas fa-user"></i>
-          About Me
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Me Section -->
-  <section id="about">
-    <div class="animate-on-scroll">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-container">
-        <div class="about-text">
-          <p>
-            Hello! I'm Ishan Bhat, a recent Computer Science graduate with a deep passion for 
-            artificial intelligence and data science. My journey in technology has been driven 
-            by curiosity and the desire to create solutions that make a meaningful impact.
-          </p>
-
+    <!-- Navbar -->
+    <nav>
+        <div class="container nav-container">
+            <h1 class="logo">Ishan Bhat</h1>
+            <ul class="nav-links">
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-details">
-              <h4>Email</h4>
-              <p><a href="mailto:ishan2003bhat@gmail.com">ishan2003bhat@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fab fa-github"></i>
-            </div>
-            <div class="contact-details">
-              <h4>GitHub</h4>
-              <p><a href="https://github.com/bhatishan2003" target="_blank">github.com/bhatishan2003</a></p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fab fa-linkedin"></i>
-            </div>
-            <div class="contact-details">
-              <h4>LinkedIn</h4>
-              <p><a href="https://www.linkedin.com/in/ishanbhat01/" target="_blank">linkedin.com/in/ishanbhat01</a></p>
-            </div>
-          </div>
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro">
+        <div class="container intro-container">
+            <h1>Hi, I'm <span>Ishan Bhat</span></h1>
+            <p>Passionate about Data Science, AI, and Machine Learning. I love building innovative projects that solve real-world problems and exploring cutting-edge technologies to create impactful solutions.</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="animate-on-scroll">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-container">
-        <div class="project-card animate-on-scroll">
-          <div class="project-header">
-            <div class="project-icon">
-              <i class="fas fa-brain"></i>
-            </div>
-            <a href="https://github.com/bhatishan2003/fashion-mnist-pytorch" class="project-title" target="_blank">
-              Fashion-MNIST with PyTorch
-            </a>
-          </div>
-          <p class="project-description">
-            A comprehensive deep learning project that classifies fashion images using PyTorch. 
-            Features neural network architecture design, model training optimization, and detailed 
-            performance evaluation with visualizations.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">PyTorch</span>
-            <span class="tech-tag">Deep Learning</span>
-            <span class="tech-tag">CNN</span>
-            <span class="tech-tag">Computer Vision</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/bhatishan2003/fashion-mnist-pytorch" class="project-link" target="_blank">
-              <i class="fab fa-github"></i>
-              View Code
-            </a>
-          </div>
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container about-container">
+            <h2>About Me</h2>
+            <p>Hello! I'm Ishan Bhat, a recent Computer Science graduate with a deep passion for artificial intelligence and data science. My journey in technology has been driven by curiosity and the desire to create solutions that make a meaningful impact.</p>
         </div>
+    </section>
 
-        <div class="project-card animate-on-scroll">
-          <div class="project-header">
-            <div class="project-icon">
-              <i class="fas fa-font"></i>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container projects-container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Fashion-MNIST</h3>
+                <a href="https://github.com/bhatishan2003/fashion-mnist-pytorch" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <p>A comprehensive deep learning project that classifies fashion images using PyTorch. Features neural network architecture design, model training optimization, and detailed performance evaluation with visualizations.</p>
             </div>
-            <a href="https://github.com/bhatishan2003/asciigenator" class="project-title" target="_blank">
-              ASCIIgenator
-            </a>
-          </div>
-          <p class="project-description">
-            A creative Python tool that transforms ordinary text into stunning ASCII art. 
-            Features multiple font styles, customizable output formats, and an intuitive 
-            command-line interface for quick text-to-art conversion.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">ASCII Art</span>
-            <span class="tech-tag">CLI</span>
-            <span class="tech-tag">Text Processing</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/bhatishan2003/asciigenator" class="project-link" target="_blank">
-              <i class="fab fa-github"></i>
-              View Code
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card animate-on-scroll">
-          <div class="project-header">
-            <div class="project-icon">
-              <i class="fas fa-gamepad"></i>
+            <div class="project-card">
+                <h3>ASCIIgenator</h3>
+                <a href="https://github.com/bhatishan2003/asciigenator" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <p>A creative Python tool that transforms ordinary text into stunning ASCII art. Features multiple font styles, customizable output formats, and an intuitive command-line interface for quick text-to-art conversion.</p>
             </div>
-            <a href="https://github.com/bhatishan2003/snakerun" class="project-title" target="_blank">
-              SnakeRun
-            </a>
-          </div>
-          <p class="project-description">
-            A  terminal-based Snake game built with Python. Features gameplay mechanics, 
-            score tracking, collision detection. A perfect blend of classic 
-            gaming and modern programming practices.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Game Development</span>
-            <span class="tech-tag">Terminal UI</span>
-            <span class="tech-tag">Object-Oriented</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/bhatishan2003/snakerun" class="project-link" target="_blank">
-              <i class="fab fa-github"></i>
-              View Code
-            </a>
-          </div>
+            <div class="project-card">
+                <h3>Snakerun</h3>
+                <a href="https://github.com/bhatishan2003/snakerun" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <p>A terminal-based Snake game built with Python. Features gameplay mechanics, score tracking, collision detection. A perfect blend of classic gaming and modern programming practices.</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <script>
-    // Smooth scrolling animation
-    function animateOnScroll() {
-      const elements = document.querySelectorAll('.animate-on-scroll');
-      
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      });
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container contact-container">
+            <h2>Contact Me</h2>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:ishan2003bhat@gmail.com">ishan2003bhat@gmail.com</a></p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/bhatishan2003" target="_blank">GitHub</a></p>
+            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/ishanbhat01" target="_blank">LinkedIn</a></p>
+        </div>
+    </section>
 
-      elements.forEach((element) => {
-        observer.observe(element);
-      });
-    }
-
-    // Parallax effect for intro section
-    function handleParallax() {
-      const intro = document.getElementById('intro');
-      const scrolled = window.pageYOffset;
-      const rate = scrolled * -0.5;
-      
-      if (intro) {
-        intro.style.transform = `translateY(${rate}px)`;
-      }
-    }
-
-    // Active navigation highlighting
-    function updateActiveNav() {
-      const sections = document.querySelectorAll('section');
-      const navItems = document.querySelectorAll('.nav-item');
-      
-      let current = '';
-      
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.pageYOffset >= sectionTop - 200) {
-          current = section.getAttribute('id');
-        }
-      });
-      
-      navItems.forEach((item) => {
-        item.style.background = 'rgba(255, 255, 255, 0.2)';
-        if (item.getAttribute('href') === `#${current}`) {
-          item.style.background = 'rgba(255, 255, 255, 0.4)';
-        }
-      });
-    }
-
-    // Initialize animations and effects
-    document.addEventListener('DOMContentLoaded', () => {
-      animateOnScroll();
-      
-      window.addEventListener('scroll', () => {
-        handleParallax();
-        updateActiveNav();
-      });
-    });
-
-    // Add click effect to buttons
-    document.querySelectorAll('.btn, .project-card, .contact-item').forEach(element => {
-      element.addEventListener('click', function(e) {
-        let ripple = document.createElement('span');
-        ripple.classList.add('ripple');
-        this.appendChild(ripple);
-        
-        let x = e.clientX - e.target.offsetLeft;
-        let y = e.clientY - e.target.offsetTop;
-        
-        ripple.style.left = `${x}px`;
-        ripple.style.top = `${y}px`;
-        
-        setTimeout(() => {
-          ripple.remove();
-        }, 600);
-      });
-    });
-  </script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ishan Bhat. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
