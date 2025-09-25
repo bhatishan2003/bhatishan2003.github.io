@@ -176,11 +176,22 @@ body {
   transform: translateY(-2px);
 }
 
-/* About Section */
-#about {
+/* Machine Learning Projects Section */
+#ml-projects {
   padding: 8rem 2rem;
   background: var(--bg-primary);
-  position: relative;
+}
+
+/* Python Projects Section */
+#python-projects {
+  padding: 8rem 2rem;
+  background: var(--bg-secondary);
+}
+
+/* Contact Section */
+#contact {
+  padding: 8rem 2rem;
+  background: var(--bg-primary);
 }
 
 .section-title {
@@ -194,42 +205,31 @@ body {
   background-clip: text;
 }
 
-.about-container {
-  max-width: 1200px;
+.contact-container {
+  max-width: 800px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-}
-
-.about-text {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
-
-.contact-info {
-  background: var(--bg-secondary);
-  padding: 3rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-light);
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: var(--bg-primary);
-  border-radius: 15px;
+  padding: 2rem;
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
   transition: var(--transition);
+  min-width: 200px;
+  border: 1px solid rgba(102, 126, 234, 0.1);
 }
 
 .contact-item:hover {
-  transform: translateX(10px);
-  box-shadow: var(--shadow-light);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-heavy);
 }
 
 .contact-icon {
@@ -242,6 +242,7 @@ body {
   justify-content: center;
   color: white;
   font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 .contact-details h4 {
@@ -263,12 +264,6 @@ body {
 
 .contact-details a:hover {
   text-decoration: underline;
-}
-
-/* Projects Section */
-#projects {
-  padding: 8rem 2rem;
-  background: var(--bg-secondary);
 }
 
 .projects-container {
@@ -413,13 +408,15 @@ body {
     font-size: 1rem;
   }
 
-  .about-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
 
-  .contact-info {
-    padding: 2rem;
+  .contact-item {
+    width: 100%;
+    max-width: 350px;
   }
 
   .cta-buttons {
@@ -439,8 +436,9 @@ body {
 
 @media (max-width: 480px) {
   #intro,
-  #about,
-  #projects {
+  #ml-projects,
+  #python-projects,
+  #contact {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -451,5 +449,11 @@ body {
 
   .project-card {
     padding: 1.5rem;
+  }
+
+  .contact-item {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
   }
 }
