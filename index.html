@@ -16,11 +16,14 @@
       <a href="#intro" class="nav-item" title="Home">
         <i class="fas fa-home"></i>
       </a>
-      <a href="#about" class="nav-item" title="About">
-        <i class="fas fa-user"></i>
+      <a href="#ml-projects" class="nav-item" title="ML Projects">
+        <i class="fas fa-brain"></i>
       </a>
-      <a href="#projects" class="nav-item" title="Projects">
-        <i class="fas fa-code"></i>
+      <a href="#python-projects" class="nav-item" title="Python Projects">
+        <i class="fab fa-python"></i>
+      </a>
+      <a href="#contact" class="nav-item" title="Contact">
+        <i class="fas fa-envelope"></i>
       </a>
     </nav>
 
@@ -34,82 +37,22 @@
           exploring cutting-edge technologies to create impactful solutions.
         </p>
         <div class="cta-buttons">
-          <a href="#projects" class="btn btn-primary">
-            <i class="fas fa-rocket"></i>
-            View Projects
+          <a href="#ml-projects" class="btn btn-primary">
+            <i class="fas fa-brain"></i>
+            ML Projects
           </a>
-          <a href="#about" class="btn btn-secondary">
-            <i class="fas fa-user"></i>
-            About Me
+          <a href="#python-projects" class="btn btn-secondary">
+            <i class="fab fa-python"></i>
+            Python Projects
           </a>
         </div>
       </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about">
+    <!-- Machine Learning Projects Section -->
+    <section id="ml-projects">
       <div class="animate-on-scroll">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-          <div class="about-text">
-            <p>
-              Hello! I'm Ishan Bhat, a recent Computer Science graduate with a
-              deep passion for artificial intelligence and data science. My
-              journey in technology has been driven by curiosity and the desire
-              to create solutions that make a meaningful impact.
-            </p>
-          </div>
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Email</h4>
-                <p>
-                  <a href="mailto:ishan2003bhat@gmail.com"
-                    >ishan2003bhat@gmail.com</a
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fab fa-github"></i>
-              </div>
-              <div class="contact-details">
-                <h4>GitHub</h4>
-                <p>
-                  <a href="https://github.com/bhatishan2003" target="_blank"
-                    >github.com/bhatishan2003</a
-                  >
-                </p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fab fa-linkedin"></i>
-              </div>
-              <div class="contact-details">
-                <h4>LinkedIn</h4>
-                <p>
-                  <a
-                    href="https://www.linkedin.com/in/ishanbhat01/"
-                    target="_blank"
-                    >linkedin.com/in/ishanbhat01</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="animate-on-scroll">
-        <h2 class="section-title">Featured Projects</h2>
+        <h2 class="section-title">Machine Learning Projects</h2>
         <div class="projects-container">
           <div class="project-card animate-on-scroll">
             <div class="project-header">
@@ -147,7 +90,15 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Python Projects Section -->
+    <section id="python-projects">
+      <div class="animate-on-scroll">
+        <h2 class="section-title">Python Projects</h2>
+        <div class="projects-container">
           <div class="project-card animate-on-scroll">
             <div class="project-header">
               <div class="project-icon">
@@ -292,6 +243,56 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="animate-on-scroll">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p>
+                <a href="mailto:ishan2003bhat@gmail.com"
+                  >ishan2003bhat@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="contact-details">
+              <h4>GitHub</h4>
+              <p>
+                <a href="https://github.com/bhatishan2003" target="_blank"
+                  >github.com/bhatishan2003</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-details">
+              <h4>LinkedIn</h4>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/ishanbhat01/"
+                  target="_blank"
+                  >linkedin.com/in/ishanbhat01</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script>
       // Smooth scrolling animation
       function animateOnScroll() {
@@ -345,7 +346,8 @@
 
         navItems.forEach((item) => {
           item.style.background = "rgba(255, 255, 255, 0.2)";
-          if (item.getAttribute("href") === `#${current}`) {
+          const href = item.getAttribute("href");
+          if (href === `#${current}`) {
             item.style.background = "rgba(255, 255, 255, 0.4)";
           }
         });
