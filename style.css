@@ -6,15 +6,15 @@
 }
 
 :root {
-  --primary-color: #667eea;
-  --secondary-color: #764ba2;
-  --accent-color: #f093fb;
+  --primary-color: #ff6b35;
+  --secondary-color: #f7931e;
+  --accent-color: #ffb347;
   --text-primary: #2d3748;
   --text-secondary: #4a5568;
   --text-light: #718096;
   --bg-primary: #ffffff;
-  --bg-secondary: #f7fafc;
-  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --bg-secondary: #fff8f0;
+  --bg-gradient: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
   --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.07);
   --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.1);
   --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -103,7 +103,7 @@ body {
 .intro-content h1 {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;
-  background: linear-gradient(135deg, #ffffff 0%, #f093fb 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #ffb347 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -224,7 +224,7 @@ body {
   box-shadow: var(--shadow-light);
   transition: var(--transition);
   min-width: 200px;
-  border: 1px solid rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.1);
 }
 
 .contact-item:hover {
@@ -282,7 +282,7 @@ body {
   transition: var(--transition);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(255, 107, 53, 0.1);
 }
 
 .project-card::before {
@@ -345,7 +345,7 @@ body {
 }
 
 .tech-tag {
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(255, 107, 53, 0.1);
   color: var(--primary-color);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
@@ -370,6 +370,32 @@ body {
 
 .project-link:hover {
   transform: translateX(5px);
+}
+
+.see-more-container {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+
+.see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--bg-gradient);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-light);
+}
+
+.see-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-medium);
 }
 
 /* Animations */
