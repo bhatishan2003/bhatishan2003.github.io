@@ -11,11 +11,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <i class="fas fa-moon"></i>
-    </button>
-
     <!-- Navigation -->
     <nav class="nav">
       <a href="#intro" class="nav-item" title="Home">
@@ -311,35 +306,6 @@
     </section>
 
     <script>
-      // Theme Toggle Functionality
-      const themeToggle = document.getElementById('themeToggle');
-      const html = document.documentElement;
-      const icon = themeToggle.querySelector('i');
-
-      // Check for saved theme preference or default to light mode
-      const currentTheme = html.getAttribute('data-theme') || 'light';
-      
-      // Update icon based on current theme
-      function updateIcon(theme) {
-        if (theme === 'dark') {
-          icon.classList.remove('fa-moon');
-          icon.classList.add('fa-sun');
-        } else {
-          icon.classList.remove('fa-sun');
-          icon.classList.add('fa-moon');
-        }
-      }
-
-      updateIcon(currentTheme);
-
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        html.setAttribute('data-theme', newTheme);
-        updateIcon(newTheme);
-      });
-
       // Smooth scrolling animation
       function animateOnScroll() {
         const elements = document.querySelectorAll(".animate-on-scroll");
