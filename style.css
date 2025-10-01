@@ -22,6 +22,18 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --text-primary: #e2e8f0;
+  --text-secondary: #cbd5e0;
+  --text-light: #a0aec0;
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.4);
+  --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -32,6 +44,38 @@ body {
   background: var(--bg-secondary);
   line-height: 1.7;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1.1rem;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: rgba(45, 55, 72, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Navigation */
@@ -63,6 +107,11 @@ body {
 .nav-item:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
+}
+
+[data-theme="dark"] .nav-item {
+  background: rgba(45, 55, 72, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Intro Section */
@@ -180,18 +229,21 @@ body {
 #ml-projects {
   padding: 8rem 2rem;
   background: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 /* Python Projects Section */
 #python-projects {
   padding: 8rem 2rem;
   background: var(--bg-secondary);
+  transition: background-color 0.3s ease;
 }
 
 /* Contact Section */
 #contact {
   padding: 8rem 2rem;
   background: var(--bg-primary);
+  transition: background-color 0.3s ease;
 }
 
 .section-title {
@@ -227,6 +279,11 @@ body {
   border: 1px solid rgba(255, 107, 53, 0.1);
 }
 
+[data-theme="dark"] .contact-item {
+  background: var(--bg-primary);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
 .contact-item:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-heavy);
@@ -249,11 +306,13 @@ body {
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
 }
 
 .contact-details p {
   color: var(--text-light);
   font-size: 0.9rem;
+  transition: color 0.3s ease;
 }
 
 .contact-details a {
@@ -283,6 +342,11 @@ body {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+[data-theme="dark"] .project-card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 107, 53, 0.2);
 }
 
 .project-card::before {
@@ -335,6 +399,7 @@ body {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   line-height: 1.6;
+  transition: color 0.3s ease;
 }
 
 .project-tech {
@@ -351,6 +416,10 @@ body {
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+[data-theme="dark"] .tech-tag {
+  background: rgba(255, 107, 53, 0.2);
 }
 
 .project-links {
@@ -423,6 +492,14 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .theme-toggle {
+    top: 1rem;
+    left: 1rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
   .nav {
     top: 1rem;
     right: 1rem;
